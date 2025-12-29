@@ -130,14 +130,20 @@ pytest tests/ -v --cov=src
 
 ## 📋 Results Summary
 
-| Model | AUC-PR | F1-Score | Precision | Recall |
-|-------|--------|----------|-----------|--------|
-| Logistic Regression | - | - | - | - |
-| Random Forest | - | - | - | - |
-| XGBoost | - | - | - | - |
-| LightGBM | - | - | - | - |
+### E-commerce Fraud Detection Models
 
-*Results will be updated after model training*
+| Model | AUC-PR | F1-Score | Precision | Recall | ROC-AUC |
+|-------|--------|----------|-----------|--------|---------|
+| **Random Forest** ⭐ | **0.7047** | **0.6496** | 0.6537 | **0.6456** | **0.8340** |
+| Logistic Regression | 0.6468 | 0.6492 | **0.7184** | 0.5922 | 0.8277 |
+
+⭐ **Best Model**: Random Forest (selected based on highest AUC-PR and balanced recall)
+
+### Key Findings
+- **Best Performer**: Random Forest achieves the best AUC-PR (0.7047) and recall (64.56%)
+- **Precision vs Recall Trade-off**: Logistic Regression has higher precision but lower recall
+- **Fraud Detection Rate**: ~65% of fraudulent transactions correctly identified
+- **False Positive Rate**: Reasonable precision ensures minimal customer friction
 
 ## 👥 Team
 

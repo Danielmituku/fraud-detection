@@ -112,10 +112,12 @@ def map_ip_to_country(fraud_df: pd.DataFrame,
     """
     # Convert IP addresses to integers
     fraud_df = fraud_df.copy()
-    fraud_df['ip_int'] = fraud_df['ip_address'].apply(ip_to_integer)
+    fraud_df['ip_int'] = fraud_df['ip_address'].astype(np.int64)
     
-    # Sort IP ranges for merge_asof
+    # Sort IP ranges for merge_asof and ensure consistent data types
     ip_country_df = ip_country_df.copy()
+    ip_country_df['lower_bound_ip_address'] = ip_country_df['lower_bound_ip_address'].astype(np.int64)
+    ip_country_df['upper_bound_ip_address'] = ip_country_df['upper_bound_ip_address'].astype(np.int64)
     ip_country_df = ip_country_df.sort_values('lower_bound_ip_address')
     
     # Use merge_asof for efficient range-based lookup

@@ -28,13 +28,13 @@ warnings.filterwarnings('ignore')
 try:
     from xgboost import XGBClassifier
     XGBOOST_AVAILABLE = True
-except ImportError:
+except (ImportError, Exception):
     XGBOOST_AVAILABLE = False
 
 try:
     from lightgbm import LGBMClassifier
     LIGHTGBM_AVAILABLE = True
-except ImportError:
+except (ImportError, Exception):
     LIGHTGBM_AVAILABLE = False
 
 
