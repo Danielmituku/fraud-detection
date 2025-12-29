@@ -1,0 +1,195 @@
+{
+  "ecommerce": {
+    "best_model": "Random Forest (Tuned)",
+    "best_params": {
+      "class_weight": "balanced",
+      "max_depth": 12,
+      "n_estimators": 100
+    },
+    "cv_results": {
+      "Logistic Regression": {
+        "F1-Score": {
+          "mean": 0.7369,
+          "std": 0.0046
+        },
+        "ROC-AUC": {
+          "mean": 0.8679,
+          "std": 0.0014
+        },
+        "Precision": {
+          "mean": 0.8417,
+          "std": 0.0065
+        },
+        "Recall": {
+          "mean": 0.6555,
+          "std": 0.0101
+        }
+      },
+      "Random Forest": {
+        "F1-Score": {
+          "mean": 0.8323,
+          "std": 0.0027
+        },
+        "ROC-AUC": {
+          "mean": 0.9539,
+          "std": 0.0016
+        },
+        "Precision": {
+          "mean": 0.879,
+          "std": 0.0015
+        },
+        "Recall": {
+          "mean": 0.7903,
+          "std": 0.0047
+        }
+      },
+      "Gradient Boosting": {
+        "F1-Score": {
+          "mean": 0.9254,
+          "std": 0.0023
+        },
+        "ROC-AUC": {
+          "mean": 0.9672,
+          "std": 0.0015
+        },
+        "Precision": {
+          "mean": 0.9996,
+          "std": 0.0002
+        },
+        "Recall": {
+          "mean": 0.8615,
+          "std": 0.004
+        }
+      }
+    },
+    "test_results": {
+      "Logistic Regression": {
+        "Precision": 0.5326,
+        "Recall": 0.6982,
+        "F1-Score": 0.6043,
+        "ROC-AUC": 0.8411,
+        "AUC-PR": 0.6643
+      },
+      "Random Forest (Tuned)": {
+        "Precision": 0.5815,
+        "Recall": 0.682,
+        "F1-Score": 0.6277,
+        "ROC-AUC": 0.8423,
+        "AUC-PR": 0.7126
+      },
+      "Gradient Boosting": {
+        "Precision": 0.9987,
+        "Recall": 0.5406,
+        "F1-Score": 0.7015,
+        "ROC-AUC": 0.8434,
+        "AUC-PR": 0.7117
+      }
+    },
+    "feature_names": [
+      "purchase_value",
+      "age",
+      "hour_of_day",
+      "day_of_week",
+      "is_weekend",
+      "time_since_signup",
+      "signup_hour",
+      "signup_day_of_week",
+      "user_total_transactions",
+      "user_transaction_number",
+      "device_total_transactions",
+      "device_unique_users"
+    ]
+  },
+  "creditcard": {
+    "best_model": "Gradient Boosting",
+    "best_params": {},
+    "cv_results": {
+      "Logistic Regression": {
+        "F1-Score": {
+          "mean": 0.0858,
+          "std": 0.0058
+        },
+        "ROC-AUC": {
+          "mean": 0.9251,
+          "std": 0.0461
+        }
+      },
+      "Random Forest": {
+        "F1-Score": {
+          "mean": 0.7139,
+          "std": 0.1071
+        },
+        "ROC-AUC": {
+          "mean": 0.9294,
+          "std": 0.02
+        }
+      },
+      "Gradient Boosting": {
+        "F1-Score": {
+          "mean": 0.607,
+          "std": 0.126
+        },
+        "ROC-AUC": {
+          "mean": 0.8409,
+          "std": 0.1254
+        }
+      }
+    },
+    "test_results": {
+      "Logistic Regression": {
+        "Precision": 0.058,
+        "Recall": 0.9184,
+        "F1-Score": 0.1092,
+        "ROC-AUC": 0.9688,
+        "AUC-PR": 0.7256
+      },
+      "Random Forest (Tuned)": {
+        "Precision": 0.3257,
+        "Recall": 0.8673,
+        "F1-Score": 0.4735,
+        "ROC-AUC": 0.9798,
+        "AUC-PR": 0.7773
+      },
+      "Gradient Boosting": {
+        "Precision": 0.7034,
+        "Recall": 0.8469,
+        "F1-Score": 0.7685,
+        "ROC-AUC": 0.9766,
+        "AUC-PR": 0.8583
+      }
+    },
+    "feature_names": [
+      "Time",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6",
+      "V7",
+      "V8",
+      "V9",
+      "V10",
+      "V11",
+      "V12",
+      "V13",
+      "V14",
+      "V15",
+      "V16",
+      "V17",
+      "V18",
+      "V19",
+      "V20",
+      "V21",
+      "V22",
+      "V23",
+      "V24",
+      "V25",
+      "V26",
+      "V27",
+      "V28",
+      "Amount"
+    ]
+  },
+  "trained_at": "2025-12-29T22:26:23.801418"
+}

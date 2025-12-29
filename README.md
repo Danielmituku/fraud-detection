@@ -134,16 +134,35 @@ pytest tests/ -v --cov=src
 
 | Model | AUC-PR | F1-Score | Precision | Recall | ROC-AUC |
 |-------|--------|----------|-----------|--------|---------|
-| **Random Forest** ⭐ | **0.7047** | **0.6496** | 0.6537 | **0.6456** | **0.8340** |
-| Logistic Regression | 0.6468 | 0.6492 | **0.7184** | 0.5922 | 0.8277 |
+| **Random Forest (Tuned)** ⭐ | **0.7126** | 0.6277 | 0.5815 | **0.6820** | 0.8423 |
+| Gradient Boosting | 0.7117 | **0.7015** | **0.9987** | 0.5406 | **0.8434** |
+| Logistic Regression | 0.6643 | 0.6043 | 0.5326 | 0.6982 | 0.8411 |
 
-⭐ **Best Model**: Random Forest (selected based on highest AUC-PR and balanced recall)
+⭐ **Best E-commerce Model**: Random Forest (Tuned) - Highest AUC-PR with balanced recall
+
+### Credit Card Fraud Detection Models
+
+| Model | AUC-PR | F1-Score | Precision | Recall | ROC-AUC |
+|-------|--------|----------|-----------|--------|---------|
+| **Gradient Boosting** ⭐ | **0.8583** | **0.7685** | **0.7034** | 0.8469 | 0.9766 |
+| Random Forest (Tuned) | 0.7773 | 0.4735 | 0.3257 | 0.8673 | **0.9798** |
+| Logistic Regression | 0.7256 | 0.1092 | 0.0580 | **0.9184** | 0.9688 |
+
+⭐ **Best Credit Card Model**: Gradient Boosting - Best balance of precision and recall
+
+### Cross-Validation Results (5-Fold)
+
+| Dataset | Model | CV F1 (mean ± std) | CV ROC-AUC (mean ± std) |
+|---------|-------|-------------------|------------------------|
+| E-commerce | Gradient Boosting | 0.9254 ± 0.0023 | 0.9672 ± 0.0015 |
+| E-commerce | Random Forest | 0.8323 ± 0.0027 | 0.9539 ± 0.0016 |
+| Credit Card | Random Forest | 0.7139 ± 0.1071 | 0.9294 ± 0.0200 |
 
 ### Key Findings
-- **Best Performer**: Random Forest achieves the best AUC-PR (0.7047) and recall (64.56%)
-- **Precision vs Recall Trade-off**: Logistic Regression has higher precision but lower recall
-- **Fraud Detection Rate**: ~65% of fraudulent transactions correctly identified
-- **False Positive Rate**: Reasonable precision ensures minimal customer friction
+- **E-commerce**: Random Forest achieves best AUC-PR (0.7126) with 68.2% recall
+- **Credit Card**: Gradient Boosting achieves best AUC-PR (0.8583) with balanced metrics
+- **Feature Scaling**: StandardScaler applied to all numerical features
+- **Hyperparameter Tuning**: GridSearchCV used for optimal model configuration
 
 ## 👥 Team
 

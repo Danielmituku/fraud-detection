@@ -40,6 +40,38 @@ All notable changes to the Fraud Detection project will be documented in this fi
 - Extreme class imbalance (~9:1 to ~500:1) requires careful handling
 - Geographic patterns contribute to fraud detection
 
+## [1.2.0] - 2025-12-30 (Final Submission)
+
+### Added
+- **Enhanced Model Training**
+  - Stratified 5-Fold Cross-Validation for reliable estimates
+  - StandardScaler feature normalization
+  - GridSearchCV hyperparameter tuning
+  - Gradient Boosting classifier
+  - Training on both e-commerce and credit card datasets
+
+- **Credit Card Fraud Detection**
+  - Full pipeline for creditcard.csv (284,807 transactions)
+  - SMOTE with 0.1 sampling strategy for extreme imbalance
+  - Best model: Gradient Boosting (AUC-PR: 0.8583)
+
+- **Final Report**
+  - Comprehensive project documentation
+  - All visualizations and SHAP analysis
+  - Business recommendations
+
+### Results
+| Dataset | Best Model | AUC-PR | F1-Score |
+|---------|------------|--------|----------|
+| E-commerce | Random Forest (Tuned) | 0.7126 | 0.6277 |
+| Credit Card | Gradient Boosting | 0.8583 | 0.7685 |
+
+### Cross-Validation Results
+- E-commerce Gradient Boosting: F1=0.9254±0.0023
+- Credit Card Random Forest: F1=0.7139±0.1071
+
+---
+
 ## [1.1.0] - 2025-12-29 (Interim-2)
 
 ### Added
