@@ -1,0 +1,34 @@
+{
+  "best_model": "Random Forest",
+  "results": {
+    "Logistic Regression": {
+      "Precision": 0.7184,
+      "Recall": 0.5922,
+      "F1-Score": 0.6492,
+      "ROC-AUC": 0.8277,
+      "AUC-PR": 0.6468
+    },
+    "Random Forest": {
+      "Precision": 0.6537,
+      "Recall": 0.6456,
+      "F1-Score": 0.6496,
+      "ROC-AUC": 0.834,
+      "AUC-PR": 0.7047
+    }
+  },
+  "feature_names": [
+    "purchase_value",
+    "age",
+    "hour_of_day",
+    "day_of_week",
+    "is_weekend",
+    "time_since_signup",
+    "signup_hour",
+    "signup_day_of_week",
+    "user_total_transactions",
+    "user_transaction_number",
+    "device_total_transactions",
+    "device_unique_users"
+  ],
+  "trained_at": "2025-12-29T21:30:42.905290"
+}
